@@ -1,2 +1,7 @@
-package com.example.projectb.repositories;public class ExpenseRepository {
+package com.example.projectb.repositories;
+
+import com.example.projectb.entities.Expense;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ExpenseRepository extends JpaRepository<Expense, Integer> {
 }
