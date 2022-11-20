@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -32,14 +33,16 @@ public class ExpenseController {
     @GetMapping("/all")
     public String findAllExpenses(Model model){
 
-        List<Expense>findAllExpenses =expenseRepository.findAll(); //add somehow
+        List<Expense>findAllExpenses =expenseRepository.findAll();
         model.addAttribute("list",findAllExpenses);
+        model.addAttribute("newExpense", new Expense());
 
         return "secondPage";
     }
-    @PostMapping
-    public String addNewExpense(Model model){
-        return "secondPage";
+    @PostMapping("/add")
+    public String addNewExpense(@ModelAttribute Expense expense){
+        expenseRepository.save(expense);
+       return "redirect:/secondPage"; //redirect fix pls14.11 #05 probably all atribute must be filled
     }
 
 
