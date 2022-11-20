@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"    lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${list}"></p>
+
+<tr th:each="expense:${list}">
+    <td th:text="${expense.amount}"/>
+    <td th:text="${expense.getAmount()}"/>
+
+</tr>
+</body>
+</html>

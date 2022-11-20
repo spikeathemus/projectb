@@ -1,33 +1,29 @@
 package com.example.projectb.entities;
 
-import lombok.Setter;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "table_expenses") // check table name
+@Table(name = "table_expenses")
 public class Expense {
 
     @Id
     @GeneratedValue
     public Integer id;
     public BigDecimal amount;
-    public BigDecimal createdAt;
+    public BigDecimal createdAtYear;
     public String description;
     private String note;
+    public Expense(){};
 
-    public Expense(int id, BigDecimal amount, BigDecimal createdAt, String description, String note) {
+    public Expense(Integer id, BigDecimal amount, BigDecimal createdAtYear, String description, String note) {
         this.id = id;
         this.amount = amount;
-        this.createdAt = createdAt;
+        this.createdAtYear = createdAtYear;
         this.description = description;
         this.note = note;
     }
-    public Expense(){};
+
 
     public int getId() {
         return id;
@@ -45,12 +41,12 @@ public class Expense {
         this.amount = amount;
     }
 
-    public BigDecimal getCreatedAt() {
-        return createdAt;
+    public BigDecimal getCreatedAtYear() {
+        return createdAtYear;
     }
 
-    public void setCreatedAt(BigDecimal createdAt) {
-        this.createdAt = createdAt;
+    public void setCreatedAtYear(BigDecimal createdAt) {
+        this.createdAtYear = createdAt;
     }
 
     public String getDescription() {

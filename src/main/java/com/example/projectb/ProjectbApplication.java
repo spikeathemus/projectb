@@ -9,5 +9,5 @@ public class ProjectbApplication {
     public static void main(String[] args) {
         SpringApplication.run(ProjectbApplication.class, args);
     }
-
+// thymeleaf, local list, print it with html,; withdraw records from db -> print it with html
 }
