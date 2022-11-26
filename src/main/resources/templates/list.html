@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"    lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,6 +7,20 @@
 <body>
 
 <p th:text="${name}"></p>
-<p th:text="${localList}"></p>
+
+<tr th:each="localString:${localList}">
+    <td th:text="${localString}">
+    <p>
+</tr>
+<p>Workers number: </p>
+<p th:text="${localList.size()}"></p>
+
+
+<form th:action="@{add-local-worker}" th:object="${addedLocalWorker}" method="post">
+    <p>New Worker: </p>
+    <p>Name: <input type="text" th:field="*{name}"></p>
+    <p>Surname: <input type="text" th:field="*{surname}"></p>
+    <p><input type="submit" value="Add new worker"></p>
+</form>
 </body>
 </html>

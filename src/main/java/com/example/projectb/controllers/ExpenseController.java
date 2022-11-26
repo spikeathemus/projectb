@@ -37,12 +37,12 @@ public class ExpenseController {
         model.addAttribute("list",findAllExpenses);
         model.addAttribute("newExpense", new Expense());
 
-        return "secondPage";
+        return "dbBase";
     }
     @PostMapping("/add")
     public String addNewExpense(@ModelAttribute Expense expense){
         expenseRepository.save(expense);
-       return "redirect:/secondPage"; //redirect fix pls14.11 #05 probably all atribute must be filled
+       return "redirect:/dbBaseXXXXXX"; //redirect fix pls14.11 #05 probably all atribute must be filled
     }
 
 

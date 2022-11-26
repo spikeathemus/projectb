@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 public class Expense {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer id;
     public BigDecimal amount;
     public BigDecimal createdAtYear;
@@ -63,5 +63,16 @@ public class Expense {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    @Override
+    public String toString() {
+        return "Expense{" +
+                "id=" + id +
+                ", amount=" + amount +
+                ", createdAtYear=" + createdAtYear +
+                ", description='" + description + '\'' +
+                ", note='" + note + '\'' +
+                '}';
     }
 }

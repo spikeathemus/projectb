@@ -15,7 +15,7 @@
 <form th:action="@{/add}" th:object="${newExpense}" method="post">
     <p>insert amount: <input type="text" th:field="*{amount}"></p>
     <p>insert description: <input type="text" th:field="*{description}"></p>
-<!--    <p>insert id: <input type="text" th:field="*{id}"> </p> handle problem with id  -->
+<!--    <p>insert id: <input type="text" th:field="*{id}"> </p>-->
     <p>insert created Year: <input type="text" th:field="*{createdAtYear}"></p>
     <p>insert note: <input type="text" th:field="*{note}"></p>
     <p><input type="submit" value="add"></p>
