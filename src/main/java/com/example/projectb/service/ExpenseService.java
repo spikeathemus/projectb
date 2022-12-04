@@ -28,5 +28,5 @@ public class ExpenseService {
         List<Expense> newList = expenseRepository.findAll();
         return newList;
     }
-//    To Do: połączyć repo żeby w ExpenseController nie trzeba było dodawać rekordów
+//    To Do: connect service for operations on repository
 }
