@@ -30,7 +30,7 @@ public class Worker {
 
     @Override
     public String toString() {
-        return "Worker{" +
+        return "Worker: " +
                 "surname='" + surname + '\'' +
                 ", name='" + name + '\'' +
                 '}';

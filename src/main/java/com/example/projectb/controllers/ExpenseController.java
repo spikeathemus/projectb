@@ -2,6 +2,7 @@ package com.example.projectb.controllers;
 
 import com.example.projectb.entities.Expense;
 import com.example.projectb.repositories.ExpenseRepository;
+import com.example.projectb.service.ExpenseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +17,8 @@ import java.util.List;
 public class ExpenseController {
 
     private ExpenseRepository expenseRepository;
+    private ExpenseService expenseService;
+
     Expense exampleExpense = new Expense(8,BigDecimal.TEN,2012,"external", "try to reduce cost");
     Expense exampleSecondExpense =
             new Expense(7,BigDecimal.valueOf(345),2000,"internal", "january integration");
@@ -28,10 +31,8 @@ public class ExpenseController {
 
     @GetMapping("/all")
     public String findAllExpenses(Model model){
-
         List<Expense>findAllExpenses =expenseRepository.findAll();
         model.addAttribute("list",findAllExpenses);
         return "dbBase";
     }
-
 }

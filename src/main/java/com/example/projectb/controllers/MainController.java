@@ -29,10 +29,9 @@ public class MainController {
     @GetMapping("/list")
     public String getLocalModel(Model model){
 
-        model.addAttribute("name", "Lista pracowników");
+        model.addAttribute("introOfTheList", "List of the workers");
         model.addAttribute("localList",listOfWorkers);
         model.addAttribute("addedLocalWorker",new Worker());
-
         return "list";
     }
     @PostMapping("/add-local-worker")
@@ -40,5 +39,4 @@ public class MainController {
         listOfWorkers.add(addedLocalWorker);
         return "redirect:/list";
     }
-
 }
