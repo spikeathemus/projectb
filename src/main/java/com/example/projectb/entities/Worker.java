@@ -1,4 +1,4 @@
-package com.example.projectb.controllers;
+package com.example.projectb.entities;
 
 public class Worker {
     private String surname;

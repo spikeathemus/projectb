@@ -12,7 +12,7 @@
     <td th:text="${localString}">
     <p>
 </tr>
-<p>Workers number: </p>
+<p>The number of actual workers: </p>
 <p th:text="${localList.size()}"></p>
 
 
@@ -22,5 +22,6 @@
     <p>Surname: <input type="text" th:field="*{surname}"></p>
     <p><input type="submit" value="Add new worker"></p>
 </form>
+<button onclick="window.location.href='/'">back to start page</button>
 </body>
 </html>

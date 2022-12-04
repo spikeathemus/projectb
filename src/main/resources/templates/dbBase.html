@@ -9,16 +9,8 @@
 
 <tr th:each="expense:${list}">
     <td th:text="${expense.getNote()}"/><br>
-    <td th:text="${expense.getAmount()}"/>
-    <p></p>
+    <td th:text="${expense.getAmount()}"/><br><br>
 </tr>
-<form th:action="@{/add}" th:object="${newExpense}" method="post">
-    <p>insert amount: <input type="text" th:field="*{amount}"></p>
-    <p>insert description: <input type="text" th:field="*{description}"></p>
-<!--    <p>insert id: <input type="text" th:field="*{id}"> </p>-->
-    <p>insert created Year: <input type="text" th:field="*{createdAtYear}"></p>
-    <p>insert note: <input type="text" th:field="*{note}"></p>
-    <p><input type="submit" value="add"></p>
-</form>
+<button onclick="window.location.href='/'">back to start page</button>
 </body>
 </html>

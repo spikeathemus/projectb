@@ -16,14 +16,31 @@ public class Expense {
     private String note;
     public Expense(){};
 
-    public Expense(Integer id, BigDecimal amount, BigDecimal createdAtYear, String description, String note) {
+    public Expense(Integer id, BigDecimal amount, int createdAtYear, String description, String note) {
         this.id = id;
         this.amount = amount;
-        this.createdAtYear = createdAtYear;
+        this.createdAtYear = BigDecimal.valueOf(createdAtYear);
         this.description = description;
         this.note = note;
     }
 
+    public Expense(Integer id) {
+        this.id = id;
+    }
+
+    public Expense(BigDecimal amount) {
+        this.amount = amount;
+    }
+    public Expense(int createdAtYear){
+        this.createdAtYear = BigDecimal.valueOf(createdAtYear);
+    }
+
+    public Expense(String description) {
+        this.description = description;
+    }
+//    public Expense(String noteOrDescription){
+//        this.note = note;
+//    }
 
     public int getId() {
         return id;
