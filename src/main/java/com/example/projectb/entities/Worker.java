@@ -1,6 +1,8 @@
 package com.example.projectb.entities;
 
-public class Worker {
+import java.io.Serializable;
+
+public class Worker implements Serializable {
     private String surname;
     private String name;
 

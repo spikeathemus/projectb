@@ -17,7 +17,6 @@ import java.util.List;
 public class ExpenseController {
 
     private ExpenseRepository expenseRepository;
-    private ExpenseService expenseService;
 
     Expense exampleExpense = new Expense(8,BigDecimal.TEN,2012,"external", "try to reduce cost");
     Expense exampleSecondExpense =

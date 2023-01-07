@@ -3,10 +3,17 @@
 <head>
     <meta http-equiv="Content-Type" charset="UTF-8">
     <title>home</title>
+    <style>
+        body {background-color: gainsboro; font-style: italic}
+        h1   {color: mediumseagreen; font-family: "Tahoma", Times, Serif; font-size: 50px ; margin-top: auto;
+        text-align: center}
+        button {border-radius: 8px; margin-top: auto; cursor: pointer;}
+    </style>
 </head>
 <body>
-<h1>Welcome to home page</h1>
+<h1>Welcome to home page. Choose a section</h1>
 <button onclick="window.location.href='/list'">list of local strings</button>
+<p></p>
 <button onclick="window.location.href='/expenses/all'">list of Expenses with db</button>
 </body>
 </html>

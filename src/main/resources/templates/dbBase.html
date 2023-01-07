@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org"    lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>DB mocking</title>
 </head>
 <body>
 
@@ -10,6 +10,7 @@
 <tr th:each="expense:${list}">
     <td th:text="${expense.getNote()}"/><br>
     <td th:text="${expense.getAmount()}"/><br><br>
+    <p>----------------------</p>
 </tr>
 <button onclick="window.location.href='/'">back to start page</button>
 </body>

@@ -1,7 +1,6 @@
 package com.example.projectb.service;
 
 import com.example.projectb.entities.Expense;
-import com.example.projectb.entities.Worker;
 import com.example.projectb.repositories.ExpenseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
